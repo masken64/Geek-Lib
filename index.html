@@ -1,99 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GeekLib</title>
-    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <link href="./styles.css" rel="stylesheet" type="text/css" />
     <script src="./script.js" defer></script>
-    <link href="./assets/nerdpig.png" rel="icon" type="image/png">
-</head>
-<body>
-        <div id="root">
-            <div id="left">
-                <img id="logo" src="./assets/Geek Lib Logo.png" alt="GeekLib Logo" width="150px">
-                <p class="addPrompt">Add Book</p>
-                <form class="addForm">
-                    <label for="title">Title</label>
-                    <input id="title" name="title" type="text" class="in">
-                    <label for="author">Author</label>
-                    <input id="author" name="author" type="text" class="in">
-                    <label for="pages">Pages</label>
-                    <input id="pages" name="pages" type="number" class="in">
-                    <label for="publish">Published</label>
-                    <input id="publish" name="publish" type="number" class="in">
-                    <div id="readb">
-                    <label for="hasRead">Read?</label>
-                    <select id="hasRead" name="hasRead">
-                        <option class="yes" value="Yes">Yes</option>
-                        <option class="no" value="No">No</option>
-                    </select>
-                </div>
-                    <button type="submit" id="addb">Add</button>
-                </form>
-            </div>
-            <div id="right">
-                <h1 class="hright">My Library</h1>
-                <div class="bookslist">
-                    <div class="it book">
-                        <img id="bc" src="./assets/book-cover/it.jpg" alt="it book cover" width="200px">
-                        <p><b>Title:</b> IT</p>
-                        <p><b>Author:</b> Stephen King</p>
-                        <p><b>Pages:</b> 321</p>
-                        <p><b>Published:</b> 1986</p>
-                    </div>
-                    <div class="rl book">
-                        <img id="bc" src="./assets/book-cover/radical.jpg" alt="radical book cover" width="200px">
-                        <p><b>Title:</b> Radical</p>
-                        <p><b>Author:</b> David Putt</p>
-                        <p><b>Pages:</b> 140</p>
-                        <p><b>Published:</b> 2010</p>
-                    </div>
-                    <div class="ht book">
-                        <img id="bc" src="./assets/book-cover/hobbit.jpg" alt="the hobbit book cover" width="200px">
-                        <p><b>Title:</b> The Hobbit</p>
-                        <p><b>Author:</b> John Ronald</p>
-                        <p><b>Pages:</b> 237</p>
-                        <p><b>Published:</b> 1937</p>
-                    </div>
-                    <div class="sp book">
-                        <img  id="bc" src="./assets/book-cover/silentpatient.jpg" alt="The Silent Patient book cover" width="200px">
-                        <p><b>Title:</b> The Silent Patient</p>
-                        <p><b>Author:</b> Alex M</p>
-                        <p><b>Pages:</b> 221</p>
-                        <p><b>Published:</b> 2019</p>
-                    </div>
-                    <div class="sj book">
-                        
-                        <img id="bc" src="./assets/book-cover/stevejobs.jpg" alt="steve jobs book cover" width="200px">
-                        <p><b>Title:</b> Steve Jobs</p>
-                        <p><b>Author:</b> Walter Isaacson</p>
-                        <p><b>Pages:</b> 170</p>
-                        <p><b>Published:</b> 2012</p>
-                    </div>
-                    <div class="ig book">
-                        <img id="bc" src="./assets/book-cover/ikigai.jpg" alt="ikigai book cover" width="200px">
-                        <p><b>Title:</b> Ikigai</p>
-                        <p><b>Author:</b> Hector Garcia</p>
-                        <p><b>Pages:</b> 240</p>
-                        <p><b>Published:</b> 2016</p>
-                    </div>
-                    <div class="ig book">
-                        <img id="bc" src="./assets/book-cover/americanlife.jpg" alt="americanlife book cover" width="200px">
-                        <p><b>Title:</b> An American Life</p>
-                        <p><b>Author:</b> Robert Lindsey</p>
-                        <p><b>Pages:</b> 699</p>
-                        <p><b>Published:</b> 1990</p>
-                    </div>
-                    <div class="ig book">
-                        <img id="bc" src="./assets/book-cover/endersgame.jpg" alt="endersgame book cover" width="200px">
-                        <p><b>Title:</b> Ender's Game</p>
-                        <p><b>Author:</b> Orson Scott</p>
-                        <p><b>Pages:</b> 147</p>
-                        <p><b>Published:</b> 1985</p>
-                    </div>
-                </div>
-            </div>
+    <link href="./assets/nerdpig.png" rel="icon" type="image/png" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="left">
+        <img
+          id="logo"
+          src="./assets/Geek Lib Logo.png"
+          alt="GeekLib Logo"
+          width="150px"
+        />
+        <p class="addPrompt">Add Book</p>
+        <form class="addForm">
+          <label for="title">Title</label>
+          <input id="title" name="title" type="text" class="in" />
+          <label for="author">Author</label>
+          <input id="author" name="author" type="text" class="in" />
+          <label for="pages">Pages</label>
+          <input id="pages" name="pages" type="number" class="in" />
+          <label for="publish">Published</label>
+          <input id="publish" name="publish" type="number" class="in" />
+          <div id="readb">
+            <label for="hasRead">Read?</label>
+            <select id="hasRead" name="hasRead">
+              <option class="yes" value="Yes">Yes</option>
+              <option class="no" value="No">No</option>
+            </select>
+          </div>
+          <button type="submit" id="addb">Add</button>
+        </form>
+      </div>
+      <div id="right">
+        <h1 class="hright">My Library</h1>
+        <div class="bookslist">
+          <div class="it book">
+            <img
+              id="bc"
+              src="./assets/book-cover/it.jpg"
+              alt="it book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> IT</p>
+            <p><b>Author:</b> Stephen King</p>
+            <p><b>Pages:</b> 321</p>
+            <p><b>Published:</b> 1986</p>
+          </div>
+          <div class="rl book">
+            <img
+              id="bc"
+              src="./assets/book-cover/radical.jpg"
+              alt="radical book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> Radical</p>
+            <p><b>Author:</b> David Putt</p>
+            <p><b>Pages:</b> 140</p>
+            <p><b>Published:</b> 2010</p>
+          </div>
+          <div class="ht book">
+            <img
+              id="bc"
+              src="./assets/book-cover/hobbit.jpg"
+              alt="the hobbit book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> The Hobbit</p>
+            <p><b>Author:</b> John Ronald</p>
+            <p><b>Pages:</b> 237</p>
+            <p><b>Published:</b> 1937</p>
+          </div>
+          <div class="sp book">
+            <img
+              id="bc"
+              src="./assets/book-cover/silentpatient.jpg"
+              alt="The Silent Patient book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> The Silent Patient</p>
+            <p><b>Author:</b> Alex M</p>
+            <p><b>Pages:</b> 221</p>
+            <p><b>Published:</b> 2019</p>
+          </div>
+          <div class="sj book">
+            <img
+              id="bc"
+              src="./assets/book-cover/stevejobs.jpg"
+              alt="steve jobs book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> Steve Jobs</p>
+            <p><b>Author:</b> Walter Isaacson</p>
+            <p><b>Pages:</b> 170</p>
+            <p><b>Published:</b> 2012</p>
+          </div>
+          <div class="ig book">
+            <img
+              id="bc"
+              src="./assets/book-cover/ikigai.jpg"
+              alt="ikigai book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> Ikigai</p>
+            <p><b>Author:</b> Hector Garcia</p>
+            <p><b>Pages:</b> 240</p>
+            <p><b>Published:</b> 2016</p>
+          </div>
+          <div class="ig book">
+            <img
+              id="bc"
+              src="./assets/book-cover/americanlife.jpg"
+              alt="americanlife book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> An American Life</p>
+            <p><b>Author:</b> Robert Lindsey</p>
+            <p><b>Pages:</b> 699</p>
+            <p><b>Published:</b> 1990</p>
+          </div>
+          <div class="ig book">
+            <img
+              id="bc"
+              src="./assets/book-cover/endersgame.jpg"
+              alt="endersgame book cover"
+              width="200px"
+            />
+            <p><b>Title:</b> Ender's Game</p>
+            <p><b>Author:</b> Orson Scott</p>
+            <p><b>Pages:</b> 147</p>
+            <p><b>Published:</b> 1985</p>
+          </div>
         </div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>

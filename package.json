@@ -1,0 +1,22 @@
+{
+  "name": "geek-lib",
+  "version": "1.0.0",
+  "description": "a library management tool",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masken64/Geek-Lib.git"
+  },
+  "author": "masken64",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masken64/Geek-Lib/issues"
+  },
+  "homepage": "https://github.com/masken64/Geek-Lib#readme",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
