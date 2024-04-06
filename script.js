@@ -66,3 +66,51 @@ function handleDelete(event) {
   const book = event.target.parentNode;
   book.remove();
 }
+
+const t = document.querySelector("#title");
+const a = document.querySelector("#author");
+const p = document.querySelector("#pages");
+const pub = document.querySelector("#publish");
+
+t.addEventListener("blur", strValidate);
+a.addEventListener("blur", strValidate);
+p.addEventListener("blur", pValidate);
+pub.addEventListener("blur", dateValidate);
+
+function strValidate(event) {
+  const errMess = "This cannot be empty!";
+  const input = event.target.value;
+  if (input === "") {
+    event.target.setCustomValidity(errMess);
+    return false;
+  } else {
+    event.target.setCustomValidity("");
+    return true;
+  }
+}
+
+function pValidate(event) {
+  const errMess = "Enter a number between 1 and 999";
+  const input = Number(event.target.value);
+  if (input < 1 || input > 999) {
+    event.target.setCustomValidity(errMess);
+    return false;
+  } else {
+    event.target.setCustomValidity("");
+    return true;
+  }
+}
+
+function dateValidate(event) {
+  const date = new Date();
+  const year = date.getFullYear();
+  const errMess = `Enter a date between 1400 and ${year}`;
+  const input = Number(event.target.value);
+  if (input < 1400 || input > year) {
+    event.target.setCustomValidity(errMess);
+    return false;
+  } else {
+    event.target.setCustomValidity("");
+    return true;
+  }
+}
